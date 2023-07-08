@@ -1,0 +1,53 @@
+<script>
+    // declaration
+    // this is declartion of function, which inform compile about:
+    //     name of the function
+    //     parameters in the parameters
+    //     function body, which will be executed with parameters when function-name is called with parameters. 
+    // this is just declratation and the function body will not be executed until it is called from somewhere. 
+    function abc()
+    {
+        // Do the operation as per expectation of this function.
+        document.write("<br> Calling from 'abc'")
+
+        return 5
+    }
+
+    if(true)
+    {
+        function abc(p1, p2, p3)
+        {
+            // Do the operation as per expectation of this function.
+            document.write("<br> Calling from 'abc' new p1/p2/p3")
+            document.write("<br> p1 = " + p1)
+            document.write("<br> p2 = " + p2)
+            document.write("<br> p3 = " + p3)
+
+            return "10"
+        }
+    }
+
+    document.write("<br> Begin")
+    
+    // Calling a function
+    // Mention name of the function, along with parameters in the function.
+    // NOTE: This doesn't start with key-word, function. 
+    var abcoutput = abc(4, 5, 6, 7)
+
+    document.write("<br> After first call to abc. abcoutput =" + abcoutput)
+    
+    var defoutput = abc()
+
+    document.write("<br> After first call to abc. defoutput =" + defoutput)
+
+    document.write("<br> End, defoutput=" + abc())
+
+</script>
+<!-- 
+// 1. How do you write a function. name, parameters, body
+// 2. How do you call a function. name, parameters
+// 3. For understanding what is declared as function and called as function,
+//    primary key (index key): name (this combination should be unique) 
+// 4. delcaring multiple functions with same name and parameters are allowed, but
+        at the time of calling, the latest function registered will be used. 
+-->
