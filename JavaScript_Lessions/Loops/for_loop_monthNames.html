@@ -1,0 +1,78 @@
+<script>
+    function log(str)
+    {
+        const timeElapsed = Date.now();
+        const today = new Date(timeElapsed);
+        var datevar = today.toUTCString();
+        document.write("<br>[" + datevar +"] : " + str)
+    }
+
+    // Based on the number, print the month name.
+    function MonthName(num)
+    {
+        if(num === 1)
+        {
+            log("January")
+        }
+        else if(num ===2)
+        {
+            log("February")
+        }
+        else if(num ===3)
+        {
+            log("March")
+        }
+        else if(num ===4)
+        {
+            log("April")
+        }
+        else if(num ===5)
+        {
+            log("May")
+        }
+        else if(num ===6)
+        {
+            log("June")
+        }
+        else if(num ===7)
+        {
+            log("July")
+        }
+        else if(num ===8)
+        {
+            log("August")
+        }
+        else if(num ===9)
+        {
+            log("September")
+        }
+        else if(num ===10)
+        {
+            log("October")
+        }
+        else if(num ===11)
+        {
+            log("November")
+        }
+        else if(num ===12)
+        {
+            log("December")
+        }
+        else 
+        {
+            log("Invalid")
+        }
+    }
+
+    // E.g., Print name of all the months in-order.
+    for(
+        let x = 1;
+        x <= 12;
+        x = x + 1
+    )
+    {
+        // Expectation is, this function will print month name according number provided.
+        MonthName(x)
+    }
+
+</script>
