@@ -1,0 +1,58 @@
+<script>
+    function log(str) {
+        let shouldLog = true
+
+        if (shouldLog) {
+            const timeElapsed = Date.now();
+            const today = new Date(timeElapsed);
+            var datevar = today.toUTCString();
+            document.write("<br>[" + datevar + "] : " + str)
+            document.write("<br>")
+        }
+    }
+
+    function logWithLevel(level, str) {
+        // level :
+        // 1(Critical),
+        // 2(Error),
+        // 3(Warning),
+        // 4(Information),
+        // 5(Verbose)
+        
+        let loggingLevel = 4
+
+        if(level <= loggingLevel)
+        {
+            log("LogLevel = " + level + " msg = " + str)
+        }
+    }
+
+    function simpleLog(str) {
+        document.write(str)
+    }
+
+    function newLineLog() {
+        document.write("<br>")
+    }
+
+    logWithLevel(4, "Starting")
+
+    // Q. print a pyramid using loop. 
+    for (let x = 4; x > 0; x--) {
+        logWithLevel(2, "Loop n starting with value = " + x)
+
+        for (let i = 0; i < x; i++) {
+            simpleLog("_")
+        }
+
+        for (let j = 0; j < 2 * (5 - x) - 1; j++) {
+            simpleLog("*")
+        }
+
+        newLineLog()
+        logWithLevel(3, "Loop n ending with value = " + x)
+    }
+
+    logWithLevel(4, "Ending")
+
+</script>
