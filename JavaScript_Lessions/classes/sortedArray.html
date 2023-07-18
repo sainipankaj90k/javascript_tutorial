@@ -1,0 +1,40 @@
+<script>
+    
+    function log(msg)
+    {
+        document.write("<br>" + msg);
+    }
+
+    // 1. One can add a value.
+    // 2. One can remove a value.
+    // 3. One can fetch the length of array.
+    // 4. One can display the array. 
+    class SortedArray
+    {
+        #arr;
+
+        constructor()
+        {
+            this.#arr = [];
+        }
+
+        add(value)
+        {
+            this.#arr += value;
+        }
+
+        display()
+        {
+            this.#arr.forEach((value) => {log(value)})
+        }
+    }
+
+    var sArray = new SortedArray();
+
+    sArray.add("abc");
+    sArray.display();
+    
+    sArray.add("abc");
+    sArray.display();
+
+</script>

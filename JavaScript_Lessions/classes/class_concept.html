@@ -1,0 +1,65 @@
+<script>
+    class Car
+    {
+        // public
+        #year;
+        model;
+
+        // private
+        #price;
+
+        constructor(y, m)
+        {
+            this.#year = y;
+            this.model = m;
+            this.#price = 5000;
+        }
+
+        CallGetPrice()
+        {
+            return this.GetPrice("SA");
+        }
+
+        GetYear()
+        {
+            return this.#year;
+        }
+
+        GetPrice(stateName)
+        {
+            this.#year = 100;
+            this.model = "MUSTANG";
+
+            if(stateName == "Washington")
+            {
+                return this.#price;
+            }
+            else
+            {
+                return this.#price*2;
+            }
+        }
+    }
+
+    function log(msg)
+    {
+        document.write("<br>" + msg);
+    }
+
+    log("Cars:")
+
+    var abc = new Car(2022, "FORD");
+
+    log("abc.model = " + abc.model);
+    log("abc.year = " + abc.year);
+    
+    var price = abc.GetPrice("Washington");
+    log("price = " + price);
+
+    log("abc.GetPrice = " + abc.GetPrice("newyork"));
+    log("abc.CallGetPrice = " + abc.CallGetPrice());
+
+    log("abc.model = " + abc.model);
+    log("abc.year = " + abc.year);
+    log("abc.price = " + abc.price);
+</script>

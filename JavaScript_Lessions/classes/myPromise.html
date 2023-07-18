@@ -1,0 +1,59 @@
+<script>
+    
+    function log(msg)
+    {
+        document.write("<br>" + msg);
+    }
+
+
+    class MyPromise
+    {
+        #funcDefPrivate;
+
+        constructor(funcDef)
+        {
+            this.#funcDefPrivate = funcDef;
+        }
+
+        okthen(res)
+        {
+            this.#funcDefPrivate(res, () =>{});
+        }
+
+        okcatch(rej)
+        {
+            this.#funcDefPrivate(()=>{}, rej);
+        }
+    }
+
+    var age = 5;
+
+    var mp = new MyPromise(
+        (resolve, reject) => {
+            if(age > 18)
+            {
+                log("major");
+                resolve(age);
+            }
+            else
+            {
+                log("minor");
+                reject(age);
+            }
+        }
+    );
+    
+    mp.okthen(
+        (msg) =>
+        {
+            log("okthen = " + msg);
+        }
+    )
+
+    mp.okcatch(
+        (msg) =>
+        {
+            log("okcatch = " + msg);
+        }
+    )
+</script>
