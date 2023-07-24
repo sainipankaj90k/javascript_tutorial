@@ -1,0 +1,37 @@
+// Use this link to download the git version control on your box. https://git-scm.com/download/win
+
+// Download as per your version control. E.g., Windows 64 bit. It will download the installer '<installer_name>.exe' to install.
+
+// Click on '<installer_name>.exe' and follow the step.
+
+// In installation use 'Let Git decide', Use command line option, ...
+
+// Finish.
+
+// Open a command prompt and write 'git' and press ENTER. It should show git options can be used.
+
+// Clone 'https://github.com/sainipankaj90k/javascript_tutorial.git'
+
+// cd javascript_tutorial
+
+// git branch
+// * main
+
+// How to create a new branch. <say, how to checkhout a new branch>.
+
+// git checkout -b users/pankaj/js_july_23/gitbasic
+// Format of branch is 'users/<name_of_user>/js_july_23/<name_of_your_branch>'
+
+// Now change the content as per need.
+
+// git status
+// this is to check the status of branch (what is pending to commit etc.0-
+
+// git add .
+// this is to add all in progress (checked out) files to commit.
+
+// git commit -m "Git download and repo structure"
+// this is to commit (burn) the changes in the branch.
+
+// git push
+// it pushes the changes to git-repo. 
