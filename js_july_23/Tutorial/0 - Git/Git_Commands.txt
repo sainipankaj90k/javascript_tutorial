@@ -35,3 +35,9 @@
 
 // git push
 // it pushes the changes to git-repo. 
+
+// git log
+// to see the commit history on the branch. 
+
+//// Folder structure : 'js_july_23' -> 'Tutorial' (contains tutorial content)
+//// Folder structure : 'js_july_23' -> 'Users/<nameOfuser> (contains content for the user)
