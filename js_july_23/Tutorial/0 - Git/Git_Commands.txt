@@ -11,6 +11,7 @@
 // Open a command prompt and write 'git' and press ENTER. It should show git options can be used.
 
 // Clone 'https://github.com/sainipankaj90k/javascript_tutorial.git'
+git clone https://github.com/sainipankaj90k/javascript_tutorial.git
 
 // cd javascript_tutorial
 
