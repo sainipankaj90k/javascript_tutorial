@@ -1,0 +1,37 @@
+// Whenever editing anything E.g., doing homework or adding tutorial content.
+// Perform below steps before making any change.
+
+// Clone the repo if not already. E.g., folder C:\JS
+git clone https://github.com/sainipankaj90k/javascript_tutorial.git
+
+// go the the folder where repo (repository) is clone. 
+// E.g., folder C:\JS\javascript_tutorial
+git checkout main
+
+// Pull the latest from github repo.
+git pull
+
+// Checkout a new branch from main branch.
+// git checkout -b <new branch name.
+git checkout -b users/pasaini/js_july_23/1_JS_Output
+
+// Now add changes, like add home folder and files. 
+// Once done. 
+
+// git status (to check current status)
+git status
+
+// git add . (to all changes unstaged files)
+git add .
+
+// git status (to check the changes are staged, shows as green color)
+git status
+
+// commit the change in local branch.
+git commit -m "Message like - homework for 1-JS_OUTPUT"
+
+// push the change to the github repo.
+git push
+
+// If pushing the branch for first time, use below command.
+git push --set-upstream origin users/pasaini/js_july_23/1_JS_Output
