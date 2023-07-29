@@ -1,9 +1,0 @@
-
-Function to print text on html page: 
-    document.write("");
-
-E.g.,
-    document.write("Hello World!");
-
-    Output:
-    Hello World!

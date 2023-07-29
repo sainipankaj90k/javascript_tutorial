@@ -1,2 +1,0 @@
-- JavaScript is popular programming language for web.
-- Just like any other programming language this one too instruct the system to perform certain task using specific syntax.
