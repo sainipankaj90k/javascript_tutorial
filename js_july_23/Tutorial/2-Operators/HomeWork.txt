@@ -1,3 +1,4 @@
+- [Pankaj] to address Operator vs Function.
 
 H.W. Find 10th place digit value from a number (considering number is in decimal number system).
 
