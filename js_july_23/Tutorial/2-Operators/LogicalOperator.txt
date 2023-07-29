@@ -1,0 +1,28 @@
+These are the operators which work on operands of type boolean (true/false)
+
+&& : and
+    Operands: 2 (1st and 2nd operand)
+    Def: Returns true if both 1st and 2nd operand is true, otherwize return false.
+E.g.,
+    true && true  : true
+    true && false : false
+    false && true : false
+    false && false: false
+
+
+|| : or
+    Operands: 2 (1st and 2nd operand)
+    Def: Returns true if any of 1st or 2nd operand is true, otherwize return false.
+E.g.,
+    true && true  : true
+    true && false : true
+    false && true : true
+    false && false: false
+
+
+! : not
+    Operands: 1 (1st operand)
+    Def: Returns true if the 1st operand is false, otherwize return false.
+E.g.,
+    !true : false
+    !false: true

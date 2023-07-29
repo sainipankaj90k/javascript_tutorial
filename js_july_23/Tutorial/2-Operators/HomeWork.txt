@@ -1,0 +1,15 @@
+- [Pankaj] to address Operator vs Function.
+
+H.W. Find 10th place digit value from a number (considering number is in decimal number system).
+
+HW: 
+Have at least 5 complex operator expressions of each type:
+- Arithmetic
+- Relational
+- Logical
+
+HW:
+- Learn about precedence of each operator with in its type.
+= https://www.w3schools.com/js/js_precedence.asp
+
+- Learn how to convert Binary number to Decimal and Decimal number to binary.

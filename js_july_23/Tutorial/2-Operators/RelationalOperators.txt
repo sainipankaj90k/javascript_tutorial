@@ -1,0 +1,32 @@
+It compares the numbers and returns boolean (true/false)
+
+< : Less than
+    - Purpose: Compare for less than.
+    - Operands : 2 (1st and 2nd operand)
+    - Def: Check if 1st operand is less than 2nd operand and return true, otherwize return false.
+E.g., 
+    5 < 3 => false
+    6 < 6 => false
+    7 < 9 => true
+
+<= : Less than or equal to
+
+E.g., 
+    5 <= 3 => false
+    6 <= 6 => true
+    7 <= 9 => true
+
+> : Greater than
+
+>= : Greater than or equal to
+
+!= : Not equal to
+
+E.g., 
+    5 != 3 => true
+    6 != 6 => false
+    7 != 9 => true
+
+== : Equals equal to for value (comparing for equality)
+
+=== : Equals equal to for value and the type of value too. 

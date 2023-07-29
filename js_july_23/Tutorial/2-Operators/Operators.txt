@@ -1,0 +1,50 @@
+Operator is a symbol or functions denoting an operation. 
+Operator is always associated with some operand.
+Operand is the value on which an operation would be executed/performed.
+
+'+': Summation operation. 
+    -> This is a operator to perform sum (addition)
+    -> It expects 2 operands (say 1st and 2nd operand)
+    -> def: add 2nd operand in 1st operand.
+
+E.g.,:
+    4 + 5 => Add 5 in 4 => 9 
+
+'-': Subract operation.
+    -> This is a operator to perform subtraction.
+    -> It expects 2 operands (say 1st and 2nd operand)
+    -> def: subtract 2nd operand from 1st operand.
+
+E.g.,:
+    5 - 3 => Subtract 3 from 5 => 2
+    7 - 9 => Subtract 9 from 7 => -2
+
+'%': Modulus operation
+    -> This is a operator to find remainder.
+    -> It expects 2 operands (say 1st and 2nd operand)
+    -> def: divide 1st operand by 2nd operand and return remainder for the division operation, keeping quotient as a whole number.
+
+E.g.,
+    10 % 2 => Remainder when 10/2 => 0 (10/2 => 5 quotient, 0 remainder)
+    9 % 4 => Remainder when 9/4 => 1 (9/4 => 2 quotient, 1 remainder)
+
+'++': Increment operator
+.....
+
+Relational operator:
+  '<' : Less than
+    -> Purpose: Compare the two numbers.
+    -> Operands: 2 operands (1st and 2nd operand)
+    -> def: checks if 1st operand is less than 2nd operand then return true, otherwize false. 
+
+E.g.,
+    4 < 5 => Is 4 less than 5 => true
+    16 < 10 => Is 16 less than 10 => false
+
+HW: 
+Have at least 5 complex operator expressions of each type:
+- Arithmetic
+- Relational
+- Logical
+
+HW:
