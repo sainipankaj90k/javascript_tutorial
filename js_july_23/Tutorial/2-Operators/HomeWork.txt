@@ -13,3 +13,18 @@ HW:
 = https://www.w3schools.com/js/js_precedence.asp
 
 - Learn how to convert Binary number to Decimal and Decimal number to binary.
+
+
+-----------------
+
+H.w. Learn about complement of a number.
+E.g., 9's complement for decimal number, 10's complement for decimal number.
+1's complement for binary number, and 2's complement for decimal number. 
+
+H.w. evaluate: 
+    4 + 3 * 2 >> 1
+    4 * 2 >> 1
+    5 / 2 << 1
+    ~(~5)
+
+// Bloom's taxonomy: Remember -> Analyze -> Apply

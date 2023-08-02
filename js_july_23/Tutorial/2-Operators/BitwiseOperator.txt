@@ -1,0 +1,79 @@
+Each number/value in programming is represented to machine/system as a binary number. 
+Assuming number size is 1 byte (8 bits)
+Implies, e.g.,
+dec-number - 0 => bin-number - 00000000
+dec-number - 1 => bin-number - 00000001
+dec-number - 2 => bin-number - 00000010
+dec-number - 3 => bin-number - 00000011
+dec-number - 4 => bin-number - 00000100
+dec-number - 5 => bin-number - 00000101
+dec-number - 6 => bin-number - 00000110
+dec-number - 7 => bin-number - 00000111
+
+& : Bitwize And operator
+    Operands: 2 (1st operand and 2nd operand)
+    Def: each bit of 1st operand is processed for each corresponding bit of 2nd operation such that, 
+        1 & 1 = 1
+        1 & 0 = 0
+        0 & 1 = 0
+        0 & 0 = 0
+
+        5 & 4 = 00000101 & 00000100 => 00000100 = 4
+        5 & 2 = 00000101 & 00000010 => 00000000 = 0
+        5 & 3 = 00000101 & 00000011 => 00000001 = 1
+
+
+| : Bitwize OR operator
+    Operands: 2 (1st operand and 2nd operand)
+    Def: each bit of 1st operand is processed for each corresponding bit of 2nd operation such that, 
+        1 | 1 = 1
+        1 | 0 = 1
+        0 | 1 = 1
+        0 | 0 = 0
+
+        5 | 4 = 00000101 | 00000100 => 00000101 = 5
+        5 | 2 = 00000101 | 00000010 => 00000111 = 7
+        5 | 3 = 00000101 | 00000011 => 00000111 = 7
+
+^ : Bitwize XOR (Exclusive OR) operator
+    Operands: 2 (1st operand and 2nd operand)
+    Def: each bit of 1st operand is processed for each corresponding bit of 2nd operation such that, 
+        1 ^ 1 = 0
+        1 ^ 0 = 1
+        0 ^ 1 = 1
+        0 ^ 0 = 0
+
+        5 ^ 4 = 00000101 ^ 00000100 => 00000001 = 1
+        5 ^ 3 = 00000101 ^ 00000011 => 00000111 = 7
+
+~ : Bitwize NOT (Complimentary) operator
+    Operands: 1 (1st operand)
+    Def: each bit of 1st operand is toggled. 
+        1111111001 => 0000000110
+
+        ~5 = 00000101 => 11111010
+        ~4 = 00000100 => 11111011
+
+>> : Shift Right operator
+    Operands: 2 (1st operand and 2nd operand)
+    Def: each bit of 1st operand is shifted to right by number of times equal to 2nd operand. For the left most bit after shifting right, becomes 0.
+
+    E.g.,
+        5 >> 1 => 00000101 >> 1 => 00000010 => 2
+        5 >> 2 => 00000101 >> 2 => 00000001 => 1
+        5 >> 3 => 00000101 >> 3 => 00000000 => 0
+        5 >> 200 => 00000101 >> 200 => 00000000 => 0
+     
+<< : Shift Left operator
+    Operands: 2 (1st operand and 2nd operand)
+    Def: each bit of 1st operand is shifted to left by number of times equal to 2nd operand. For the right most bit after shifting right, becomes 0.
+     
+    E.g.,
+        5 << 1 => 00000101 << 1 => 00001010 => 10
+        5 << 2 => 00000101 << 2 => 00010100 => 20
+        5 << 3 => 00000101 << 3 => 00101000 => 40
+        5 << 6 => 00000101 >> 6 => 01000000 => 64
+        5 << 200 => 00000101 >> 200 => 00000000 => 0
+
+ 5 << 6 (with 32 bit) => 00000000 00000000 00000001 01000000 = 320
+     
