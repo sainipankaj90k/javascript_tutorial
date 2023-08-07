@@ -1,0 +1,8 @@
+To use a variable, it has usually 3 steps.
+1. Declaration.
+    E.g.,
+    let varname;
+2. Defining (assigning value).
+    varname = 5;
+3. Using value.
+    document.write("Variable name = " + varname);

@@ -1,0 +1,7 @@
+Q. Given length of a rod in 'meters', convert the same in 'centimeters'.
+
+Q. Given the temperature in 'Farenhite', convert the same in 'Celcius'.
+
+Q. Given the principal amount, rate of interest yearly, and time of loan in years, print the simple interst payable at the end of time duration. 
+
+Q. Given the temperature in 'Celcius', convert the same in 'Kelvin'.

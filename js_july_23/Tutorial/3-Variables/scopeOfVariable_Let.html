@@ -1,0 +1,36 @@
+<script>
+    let a = 5;
+    let b = 0;
+    
+    document.write("<br>0 a =" + a);
+
+    {
+        document.write("<br>1 a = " + a);
+        let b = 6;
+        {
+            let b = 7;
+            document.write("<br>2 a = " +a);
+            document.write("<br>2 b =" +b);
+        }
+        
+        document.write("<br>1 a = " +a);
+        document.write("<br>1 b =" +b);
+    }
+
+    document.write("<br>0 a =" + a);
+    document.write("<br>0 b =" + b); // syntax error.
+    document.write("<br>0 a =" + a);
+
+    /*
+    Output:
+        0 a =5
+        1 a = 5
+        2 a = 5
+        2 b =7
+        1 a = 5
+        1 b =6
+        0 a =5
+        0 b =0
+        0 a =5
+    */
+</script>

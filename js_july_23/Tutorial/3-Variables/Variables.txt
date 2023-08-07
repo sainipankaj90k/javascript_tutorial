@@ -1,0 +1,158 @@
+Variable can be considered as a container which can keep values. 
+Variable need to be named (as identifier) for its identification and use.
+
+Variable must be declared before use. Below are the ways to declare variable. 
+Syntax for declaration of variable is as below:
+<Type Of Variable> <nameOfVariable>;
+
+E.g,
+var variableName;
+
+Types of variable: Variables are of 3 types, 'var', 'let', 'const'.
+    'var': 'var' helps declare a variable of which value can be stored multiple times of any type.
+        Using 'var' one can declare same variableName multiple times in a block. 
+
+    'let': 'let' is similar to 'var' with only restriction that using 'let' one can declare one variableName only once in a block. 
+
+    'const': 'const' is similar to 'let' but with restriction that it's value can be assigned at the declaration time only, and it cannot be changed afterwards.
+
+What is a block of code:
+    Any thing in '{' between '}' (without quotes) is considered a block of code. 
+
+Global variable:
+<script>
+    let a = 5;
+    
+    {
+        document.write(a);
+        let b = 6;
+        {
+            document.write(a);
+            document.write(b);
+        }
+    }
+    
+    document.write(a);
+    document.write(b); // This will give error as 'b' is not visible at this depth of block.
+</script>
+
+Scope of variable:
+    'var': it's value can be used in any block below or above. It is based on lines executed, and the latest value of the variable is used (unlike let which prioritizes the local scope first and can't see the inner block declarations.)
+    E.g,
+    <script>
+        var a = 5;
+        
+        document.write("<br>0 a =" + a);
+
+        {
+            document.write("<br>1 a = " + a);
+            document.write("<br>1 b =" + b);
+            var b = 6;
+            {
+                var b = 7;
+                document.write("<br>2 a = " +a);
+                document.write("<br>2 b =" +b);
+            }
+            
+            document.write("<br>1 a = " +a);
+            document.write("<br>1 b =" +b);
+        }
+
+        document.write("<br>0 a =" + a);
+        document.write("<br>0 b =" + b); // syntax error.
+        document.write("<br>0 a =" + a);
+
+        /*
+        Output:
+            0 a =5
+            1 a = 5
+            1 b =undefined
+            2 a = 5
+            2 b =7
+            1 a = 5
+            1 b =7
+            0 a =5
+            0 b =7
+            0 a =5
+        */
+    </script>
+
+    'let': it's value can be used for current block and nested blocks in current block.
+    it's value cannot be used for block above (having less depth than current) the current block. If used, it will give syntax error for not having the variable name declared.
+    E.g.,
+        <script>
+            let a = 5;
+            
+            document.write("<br>0 a =" + a);
+
+            {
+                document.write("<br>1 a = " + a);
+                let b = 6;
+                {
+                    document.write("<br>2 a = " +a);
+                    document.write("<br>2 b =" +b);
+                }
+            }
+
+            document.write("<br>0 a =" + a);
+            document.write("<br>0 b =" + b); // syntax error.
+            document.write("<br>0 a =" + a);
+        </script>
+
+        E.g.,2:
+        <script>
+            let a = 5;
+            let b = 0;
+            
+            document.write("<br>0 a =" + a);
+
+            {
+                document.write("<br>1 a = " + a);
+                let b = 6;
+                {
+                    let b = 7;
+                    document.write("<br>2 a = " +a);
+                    document.write("<br>2 b =" +b);
+                }
+                
+                document.write("<br>1 a = " +a);
+                document.write("<br>1 b =" +b);
+            }
+
+            document.write("<br>0 a =" + a);
+            document.write("<br>0 b =" + b); // syntax error.
+            document.write("<br>0 a =" + a);
+
+            /*
+            Output:
+                0 a =5
+                1 a = 5
+                2 a = 5
+                2 b =7
+                1 a = 5
+                1 b =6
+                0 a =5
+                0 b =0
+                0 a =5
+            */
+        </script>
+
+    'const': 'const' has exactly same behavior as 'let'. The only difference is, const's value cannot be changed.
+
+Variable has 2 operations after declaration, 
+- Assign value in the variable.
+    e.g., variableName = 50; // assigning value to variable using assignment operator.
+    e.g., variableName = 60;
+- Use the value of variable. In simple words, assume the value of variable is replaced for calculation/evaluation of state.
+    e.g., variableName + 10;
+
+Variable name as some restrictions:
+- Variable names must start with a letter, an underscore (_) or a dollar sign ($).
+- Variable names cannot contain spaces.
+- Variables cannot be the same as reserved keywords such as if or const. (What are reserved keywords can be found here: https://www.w3schools.com/js/js_reserved.asp )
+
+Variable name suggestions:
+- By convention, JavaScript variable names are written in camelCase.
+- Variables should be given descriptive names that indicate their content and usage (e.g. sellingPrice and costPrice rather than x and y).
+- As JavaScript variables do not have set types, it can be useful to include an indication of the type in the name (e.g. orderNumber is obviously a numeric ID, whereas order could be an object, a string or anything else).
+

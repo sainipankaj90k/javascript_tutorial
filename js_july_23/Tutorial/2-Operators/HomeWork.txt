@@ -28,3 +28,8 @@ H.w. evaluate:
     ~(~5)
 
 // Bloom's taxonomy: Remember -> Analyze -> Apply
+
+--------
+HW: 
+Have at least 5 complex operator expressions of each type:
+- Bitwize
