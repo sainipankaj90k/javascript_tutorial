@@ -1,0 +1,17 @@
+git branch
+git checkout main
+git pull
+
+git checkout -b users/manita/js_july_23/<nameOfBranch>
+
+// Now start doing homework in your users/homework folder.
+
+git status
+git add .
+git status
+git commit -m "Homework - topic of homework"
+git status
+git push
+git push --set-upstream origin users/manita/js_july_23/<nameOfBranch>
+
+// Now raise request for PR.
