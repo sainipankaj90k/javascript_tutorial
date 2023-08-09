@@ -14,10 +14,10 @@ E.g.,
     Operands: 2 (1st and 2nd operand)
     Def: Returns true if any of 1st or 2nd operand is true, otherwize return false.
 E.g.,
-    true && true  : true
-    true && false : true
-    false && true : true
-    false && false: false
+    true || true  : true
+    true || false : true
+    false || true : true
+    false || false: false
 
 
 ! : not
