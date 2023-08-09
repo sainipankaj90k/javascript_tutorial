@@ -1,3 +1,5 @@
+// go to the repo folder.
+
 git branch
 git checkout main
 git pull
