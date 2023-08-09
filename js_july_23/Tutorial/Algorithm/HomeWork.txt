@@ -1,0 +1,11 @@
+1. Write steps of algorithm to convert temperature from Celcius to Kelvin.
+
+2. Write steps of algorithm to find remainder of a number (say divident) when divided by another number (say divisor).
+
+3. Write steps of algorithm to find square of a given number.
+
+4. Write steps of algorithm to multiply a number by 2 without using multiply operator.
+
+5. Write steps of algorithm to multiply a number by 3 without using multiply operator.
+
+For all above questions, write JavaScript code for the algorithm proposed. 

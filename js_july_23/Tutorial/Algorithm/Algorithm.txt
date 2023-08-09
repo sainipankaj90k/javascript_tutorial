@@ -1,0 +1,50 @@
+What is Algorithm?
+Algorithm is a step by step guide to get solution of a problem. 
+
+E.g.,
+Problem: Convert the given length in meters into centimeters and print the length in centimeters.
+    Input: Length in meters. (take it as a constant integer value)
+    Output: Printed length in centimeters as text "Length in centimeter <value in centimeters>".
+
+Algorithm:
+1. Take input (the length in meters) and store it in variable (say, meter).
+2. Create a variable (say, centimeter). // It will be storing cm.
+3. Calculate this equation (multiply meter by 100) and store it in variable (say, centimeter)
+4. Print the string "Length in centimeter "
+5. Print value of centimeter.
+
+Code (JS):
+<script>
+    let meter = 54;
+    let centimeter;
+    centimeter = meter * 100;
+
+    document.write("<br> Length in centimeter ");
+    document.write(centimeter);
+</script>
+
+Code (C#):
+class program
+{
+    public static void main()
+    {
+        int meter = 54;
+        int centimeter;
+        centimeter = meter * 100;
+
+        Console.Write("Length in centimeter ");
+        Console.Write(centimeter);
+    }
+}
+
+Code (C):
+
+void main()
+{
+    int meter = 54;
+    int centimeter;
+    centimeter = meter * 100;
+
+    printf("Length in centimeter ");
+    printf("%d", centimeter);
+}
