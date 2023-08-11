@@ -1,0 +1,32 @@
+
+Conditional statements help making a decision on whether a block of statements will be executed or not.
+
+Syntax:
+
+if(<condition>) // Condition should result in 'true'/'false'. E.g., (5 > 8) valid, ("abc") invalid.
+{
+    // Statement block-1.
+}
+else if (<condition>)
+{
+    // Statement block-2.
+}
+else if (<condition>)
+{
+    // Statement block-3.
+}
+else
+{
+    // Statement block-4.
+}
+
+// Starting for first 'if' the condition is evaluated, if found 'true' the control moves to immediate next block of code, otherwize skips that block of code. 
+
+// optionally, if statement can be followed by 'else if', then providing condition to evaluate. It will behave similar to above statement of 'if' block. i.e., if true, control moves to next block of code, otherwise skips it. 
+// 'else if' can be followed by 'if' or 'else if'.
+
+// optionally, if statement can end with 'else', here no condition is provided. If none of the prior conditions is true, then control moves to the next block of code after 'else'. 
+
+// In case there is no 'else' and condition is not resulted in 'true', the control moves to the end of the if statements. 
+
+// If a block of code under 'if-else' statement is executed, the other blocks of code or conditions will not be evaluated the that 'if-else' statement. i.e., only one of the block will get execute or non, but there can never be more than one block get to execute. 
