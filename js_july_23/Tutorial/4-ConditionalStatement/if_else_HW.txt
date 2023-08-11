@@ -1,0 +1,32 @@
+1. Print if provided number is EVEN or ODD.
+E.g.,
+- for number 3, print '3 is ODD'
+- for number 4, print '4 is EVEN'
+
+2. Print if provided year is Leap year or not.
+E.g., 
+- for an year 2000, print '2000 is leap year'.
+- for an year 2001, print '2001 is not a leap year'.
+- for an year 1900, print '1900 is not a leap year'.
+
+What is a leap year?
+An year is a leap year, if it is not divisible by 100 and divisible by 4 or if it is divisible by 100 and divisible by 400.
+
+3. Print in which % tax category the given salary is falling under.
+Take tax slabs as below:
+- Salary lower than or equal to 3,00,000 is charged with no tax. 
+- Salary more than 3,00,000 and less than or equal to 5,00,000 is charged with 10% tax.
+- Salary more than 5,00,000 and less than or equal to 10,00,000 is charged with 20% tax.
+- Salary more than 10,00,000 is charged with 30% tax. 
+
+4. Print if a number is divisible by 19 and 17, or just by 19 or 17, or by none.
+E.g.,
+- for number 323, print '323 is divisible by both 19 and 17'
+- for number 38, print '38 is divisible by either 19 or 17'
+- for number 34, print '34 is divisible by either 19 or 17'
+- for number 36, print '36 is not divible by either 19 or 17'
+
+5. Provided two numbers, print if provided first number is divisble by second number or not.
+E.g.,
+- for numbers 5  4, print '5 is not divisible by 4'.
+- for number 8 2, print '8 is divisible by 2'. 
