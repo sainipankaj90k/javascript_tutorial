@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let number = 323;
+        // Change this to the number you want to check
+
+        if (number % 19 === 0 && number % 17 === 0) {
+            document.write(number + " is divisible by both 19 and 17"+"<br>");
+        } else if (number % 19 === 0 || number % 17 === 0) {
+            document.write(number + " is divisible by either 19 or 17"+"<br>");
+        } else {
+            document.write(number + " is not divisible by either 19 or 17"+"<br>");
+        }
+
+    </script>
+
+    <script>
+        var firstNumber = 50; 
+        // Change this to the first number you want to check
+        var secondNumber = 5; 
+        // Change this to the second number you want to use as divisor
+
+        if (firstNumber % secondNumber === 0) {
+            document.write(firstNumber + " is divisible by " + secondNumber+"<br>");
+        } else {
+            document.write(firstNumber + " is not divisible by " + secondNumber+"<br>");
+        }
+
+    </script>
+</body>
+
+</html>
