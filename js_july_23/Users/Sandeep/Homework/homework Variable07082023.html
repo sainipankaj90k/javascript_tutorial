@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let fahrenheitTemperature = 72;
+
+        let celsiusTemperature;
+
+        celsiusTemperature = (fahrenheitTemperature - 32) * 5 / 9;
+
+        document.write(
+            "<br> " + fahrenheitTemperature + "°F = " + celsiusTemperature.toFixed(2) + "°C");
+            document.write("<br>");
+
+    </script>
+
+    <script>
+        let lengthInMeters = 5;
+
+        let lengthInCentimeters;
+
+        lengthInCentimeters = lengthInMeters * 100;
+
+        document.write(
+            "<br>" + lengthInMeters + " meters = " + lengthInCentimeters + " centimeters");
+            document.write("<br>");
+
+    </script>
+
+    <script>
+        let principal = 1000;
+        let rateOfInterest = 5;
+        let timeInYears = 3;
+
+        let simpleInterest = (principal * rateOfInterest * timeInYears) / 100;
+
+        document.write(
+            "<br> Principal: RS " + principal +
+            "<br> Rate of Interest: " + rateOfInterest + "%" +
+            "<br> Time: " + timeInYears + " years" +
+            "<br> Simple Interest: RS " + simpleInterest.toFixed(2));
+            document.write("<br>");
+
+    </script>
+    <script>
+        
+    let celsiusTEmperature = 25; // Replace with your Celsius temperature
+    let kelvinTemperature;
+
+    kelvinTemperature = celsiusTEmperature + 273.15;
+
+    document.write(
+    "<br> " + celsiusTEmperature + "°C = " + kelvinTemperature.toFixed(2) + " K");
+
+    document.write("<br>");
+    </script>
+</body>
+
+</html>
