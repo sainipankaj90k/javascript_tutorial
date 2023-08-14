@@ -1,0 +1,26 @@
+// Algo:
+
+1. Declare a variable 'a' and initialize with value 5.
+2. if value of 'a' is greater than '5' then go to step (3) otherwise go to step (5)
+3. print string " number is > 5 "
+4. go to step 7
+5. print string " number is < 5 "
+6. go to step 7
+7. print string "End of program"
+
+Pseudo code:
+
+{
+    let a = 5;
+
+    if(a > 5)
+    {
+        document.write(" number is > 5 ");
+    }
+    else
+    {
+        document.write(" number is > 5 ");
+    }
+
+    document("End of program");
+}
