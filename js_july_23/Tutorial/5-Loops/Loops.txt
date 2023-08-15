@@ -1,0 +1,38 @@
+Loop statements help iterate over a block of statement repeatedly based on certain condition being true. 
+
+Syntax:
+
+    for( <initialization>; <condition>; <update>)
+    {
+        // statements.
+    }
+
+Execution flow:
+step 1: initialization.
+step 2: condition check. if true go to step 3 other wize step 6
+step 3: execute statement in the block.
+step 4: execute udpate step.
+step 5: go to step 2
+step 6: first like after the loop. 
+
+// Algo:
+1. Declare a variable 'a' and assign with value 5.
+2. Assign value '10' in variable 'a'.
+3. if value of 'a' is greater than '5' then go to step (4) otherwise go to step (8)
+4. print string " number is <value of variable 'a'>"
+6. assign value of 'a' as one less than current value of 'a'.
+7. go to step (3)
+8. print string "End of program"
+
+Pseudo code:
+
+{
+    let a = 5;
+
+    for(a = 10; a > 5; a = a - 1)
+    {
+        document.write(" number is " + a);
+    }
+
+    document("End of program");
+}

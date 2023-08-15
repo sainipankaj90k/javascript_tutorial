@@ -1,0 +1,42 @@
+1. Print numbers in Arithmetic progression (AP). 
+    AP requires 3 values: initial value (a), common-difference (d), and number of values (n).
+    First value a_0 = a
+    Second value a_1 = a + d
+    Third value a_2 = a + 2*d
+
+    nth value a_n-1 = a + (n-1)*d
+
+    E.g.,
+    for initial value 3, common difference 5, number of values as 4, 
+    Print: 3, 8, 13, 18
+
+2. Print numbers in Geometric progress (GP)
+    initial value (a), common-ratio (r), and number of values (n)
+
+    nth value a_n-1 = a * (r raised to the power (n-1)) = a * (r * r * .. n-1 times)
+
+    E.g., initial value = 3, common ratio = 2, number of values = 4
+    Print: 3, 6, 12, 24
+
+3. Print all the digits of a number in reverse order.
+    E.g., for number 4356
+    Print: 6, 5, 3, 4
+
+4. From years 1 to 2024, print if the year is leap year or not.
+    E.g., 
+    1 is not a leap year
+    2 is not a leap year
+    3 is not a leap year
+    4 is a leap year
+    5 is not a leap year
+    ....
+    2024 is a leap year
+
+5. Check if a given number is a perfect square or not.
+    E.g., 16 = perfect square of 4. 
+    Print: 16 is a perfect square.
+
+    E.g., 12 = not a perfect square.
+    Print: 12 is not a perfect square.
+
+6. Do the question : https://leetcode.com/problems/sqrtx/
