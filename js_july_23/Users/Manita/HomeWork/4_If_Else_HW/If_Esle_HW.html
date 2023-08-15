@@ -1,0 +1,130 @@
+<script>
+    // Q1. Print if provided number is EVEN or ODD.
+let number = 17;
+
+if (number % 2 ===0)
+{
+    document.write("<br>" + number + " is even number");
+    document.write("<br>");
+}
+
+else  
+{
+    document.write("<br>" + number  + " is Odd number");
+    document.write("<br>");
+}
+
+document.write("<br>");
+
+// Q2. Print if provided year is Leap year or not?
+
+let year = 1990;
+
+if ((year % 4 === 0 && year % 100 !== 0 )|| year % 400 === 0)
+{
+    document.write("<br>" + year + " is a leap year");
+    document.write("<br>");
+}
+else
+{
+    document.write("<br>" + year + " is not a leap year");
+    document.write("<br>");
+}
+
+document.write("<br>");
+
+// Q3. Print in which % tax category the given salary is falling under.
+  // Take tax slabs as below:
+  // Salary lower than or equal to 3,00,000 is charged with no tax. 
+  // Salary more than 3,00,000 and less than or equal to 5,00,000 is charged with 10% tax.
+  // Salary more than 5,00,000 and less than or equal to 10,00,000 is charged with 20% tax.
+ // Salary more than 10,00,000 is charged with 30% tax. 
+
+var Salary = 7500000; 
+if (Salary <= 300000)
+{
+    document.write("<br>" + Salary + " No Tax")
+    document.write("<br>");
+}
+
+else if (Salary > 300000  &&  Salary <= 500000)
+{
+    document.write("<br>" + Salary + " 10% tax charged")
+    document.write("<br>");
+}
+
+else if (Salary > 500000  &&  Salary <= 1000000)
+{
+    document.write("<br>" + Salary + " 20% tax charged")
+    document.write("<br>");
+
+}
+ 
+else if (Salary > 1000000)
+{
+    document.write("<br>" + Salary + " 30% tax charged")
+    document.write("<br>");
+}
+
+else
+{
+
+}
+
+document.write("<br>");
+
+
+// Q4.  Print if a number is divisible by 19 and 17, or just by 19 or 17, or by none.
+    // E.g.,
+    // for number 323, print '323 is divisible by both 19 and 17'
+    // for number 38, print '38 is divisible by either 19 or 17'
+    // for number 34, print '34 is divisible by either 19 or 17'
+    // for number 36, print '36 is not divible by either 19 or 17'
+
+ var number_1 = 36;
+ if (number_1 % 19 === 0 && number_1 % 17 === 0 )
+ {
+    document.write("<br> Yes, " + number_1 + " is divisible by 19 and 17");
+    document.write("<br>");
+ }
+
+ else if (number_1 % 19 === 0 || number_1 % 17 === 0)
+ {
+    document.write("<br> Yes, " + number_1 + " is divisible by either 19 and 17");
+    document.write("<br>");
+ }
+ else if (number_1 % 19 !== 0 && number_1 % 17 !== 0)
+ {
+    document.write("<br> No, " + number_1 + " is not divisible by 19 and 17");
+    document.write("<br>");
+ }
+ else 
+ {
+
+ }
+
+ document.write("<br>");
+ 
+
+// Q5. Provided two numbers, print if provided first number is divisble by second number or not.
+    // E.g.,
+    // for numbers 5  4, print '5 is not divisible by 4'.
+    //for number 8 2, print '8 is divisible by 2'. 
+
+
+    var number_2 = 25;
+    var number_3 = 10;
+    if (number_2 % number_3 === 0)
+    {
+        document.write("<br> Yes, " + number_2 + " is divisible by " + number_3);
+        documet.write("<br>");
+    }
+
+    else if (number_2 % number_3 !== 0)
+    {
+        document.write("<br> No, " + number_2 + " is not divisible by " + number_3);
+        documet.write("<br>");
+    }
+
+
+</script>
