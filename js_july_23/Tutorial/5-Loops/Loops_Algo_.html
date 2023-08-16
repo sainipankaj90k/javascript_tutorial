@@ -1,0 +1,79 @@
+<script>
+    // WAP for below problems using loops/conditions/operators.
+
+    let num = 543;
+    let revnum = 0;
+    let tempQuo, tempRem;
+    for(tempQuo = num; tempQuo > 0; )
+    {
+        tempRem = tempQuo % 10;
+        tempQuo = tempQuo / 10;
+
+        // to remove fraction from a number.
+        let fraction = tempQuo % 1;
+        tempQuo = tempQuo - fraction;
+
+        revnum = (revnum * 10) + tempRem;
+
+        document.write(" output :" + tempRem);
+    }
+
+    document.write("<br> End of program. Revnum = " + revnum + " actual number = " + num + "<br>" );
+</script>
+
+<script>
+// Check if a number is palindrome or not.
+//// A number is a palindrome if the number and its reverse are equal. E.g., 54345, its reverse is 54345 which is equal to the actual number. 
+
+    let num1 = 34343;
+    let revnum1;
+
+    {
+        let num = num1;
+        let revnum = 0;
+        let tempQuo, tempRem;
+        for(tempQuo = num; tempQuo > 0; )
+        {
+            tempRem = tempQuo % 10;
+            tempQuo = tempQuo / 10;
+
+            // to remove fraction from a number.
+            let fraction = tempQuo % 1;
+            tempQuo = tempQuo - fraction;
+
+            revnum = (revnum * 10) + tempRem;
+        }
+
+        revnum1 = revnum;
+    }
+    
+    document.write("<br>num1 = " + num1);
+    document.write("<br>revnum1 = " + revnum1);
+
+    if(num1 === revnum1)
+    {
+        document.write("<br>" + num1 + " is a palindrome");
+    }
+    else
+    {
+        document.write("<br>" + num1 + " is not a palindrome");
+    }
+
+    document.write("<br> End of program." + "<br>");
+</script>
+
+<script>
+    // Find cube-root of a number (greatest integer of that)
+
+    let cube = 1000;
+    let cuberoot;
+
+    for(cuberoot = 0; cuberoot * cuberoot * cuberoot <= cube; cuberoot = cuberoot + 1)
+    {
+        // Nothing to add here.
+    }
+
+    cuberoot = cuberoot - 1;
+
+    document.write("<br>" + "cuberoot of " + cube + " = " + cuberoot + "<br>")
+</script>

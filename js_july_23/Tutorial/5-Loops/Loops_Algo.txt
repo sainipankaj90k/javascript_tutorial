@@ -1,0 +1,95 @@
+// WAP for below problems using loops/conditions/operators.
+
+// Reverse a number.
+Algo:
+Step 1: declare a variable (say num) and assign given number to it. 
+Step 2: declare a variables (say tempRem and tempQuo) // it will be used to keep remainder and quotient respectively.
+step 3: assign value of 'num' in 'tempQuo'
+step 4: check if value of 'tempQuo' is greater than 0, if yes, go to step 5, otherwise goto step 8  
+Step 5: calculate the remainder by dividing num by 10 and store it in variable 'tempRem'
+Step 6: calculate the quotient by dividing number by 10 and store it in variable 'tempQuo'
+step 6.1: make tempQuo greatest integer (if containing fraction). Find fraction part of tempQuo (by diving by 1) and subtract from the tempQuo
+Step 7: print the value of 'tempRem'
+Step 8: print the string 'End of program'.
+
+// E.g., 543
+num = 543
+tempQuo = 543
+since tempQuo is greater than 0 : false
+tempRem = 3 // 543%10
+tempQuo = 54 // 543/10
+print tempRem // output window : 3
+
+since tempQuo is greater than 0 : false
+tempRem = 4 // 54%10
+tempQuo = 5 // 54/10
+print tempRem // output window : 34
+
+since tempQuo is greater than 0 : true
+tempRem = 5 // 5%10
+tempQuo = 0 // 5/10
+print tempRem // output window : 345
+
+since tempQuo is greater than 0: false
+print 'End of program' : 345 End of program.
+
+<script>
+    let num = 543;
+    let tempQuo, tempRem;
+    for(tempQuo = num; tempQuo > 0; )
+    {
+        tempRem = tempQuo % 10;
+        tempQuo = tempQuo / 10;
+
+        // to remove fraction from a number.
+        tempQuo = tempQuo - (tempQuo%1)
+
+        document.write(tempRem);
+    }
+
+    document.write("<br> End of program");
+</script>
+
+// Check if a number is palindrome or not.
+//// A number is a palindrome if the number and its reverse are equal. E.g., 54345, its reverse is 54345 which is equal to the actual number. 
+
+Algo:
+Step 1: declare a variable (say num) and assign the given number to it.
+Step 2: // Reverse the number and store in revnum as mentioned above. 
+Step 3: check if value of 'num' is equal to value of 'revnum', if yes go to step 4, otherwise go to step 6
+step 4: print '<value of num> is a palindrom'
+step 5: go to step 7
+step 6: print '<value of num> is not a palindrom'
+step 7: print 'End of program'.  
+
+// Find cube-root of a number (greatest integer of that)
+
+// cube-root of a number, is a number which if multiplied by itself 3 times, becomes the provided number.
+// E.g., for 27, cube root of 27 is 3. Since, multiple 3 by itself 3 times, it becomes 27, 3*3*3.
+// E.g., for 8, cube root of 8 is 2. Since, multiple 2 by itself 3 times, it becomes 8, 2*2*2.
+// E.g., for 10, cube root of 10 is 2.x. Since, multiple 2.x by itself 3 times, it becomes 10, 2.x*2.x*2.x, here x is fraction, so to become greatest integer, it will require fraction to be removed, hence result is '2'.
+
+Algo:
+Step 1: declare a variable (say num) and assign the given number to it.
+Step 2: declare a variable (say cuberoot) and assign the value as 0.
+Step 3: if (cuberoot * cuberoot * cuberoot) <= num, then go to step 4, otherwise go to step 6
+Step 4: cuberoot = cuberoot + 1;
+Step 5: go to step 3
+Step 6: cuberoot = cuberoot - 1;
+Step 7: print value of 'cuberoot'.
+
+// say num = 1000; cuberoot : 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ==> 10
+// say num 10; cuberoot : 0, 1, 2, 3; ==> 2
+
+<script>
+    let cube = 10;
+    let cuberoot = 0;
+    for( ; cuberoot * cuberoot * cuberoot <= cube; )
+    {
+        cuberoot = cuberoot + 1;
+    }
+
+    cuberoot = cuberoot - 1;
+
+    document.write("<br>" + "cuberoot of " + cube + " = " + cuberoot + "<br>")
+</script>
