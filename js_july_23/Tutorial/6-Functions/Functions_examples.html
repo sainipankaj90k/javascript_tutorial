@@ -1,0 +1,50 @@
+<script>
+    // Write a function to find square_root of a number. The result should be greatest integer of square root.
+    let num1 = 16;
+    let sqrt1;
+
+    let num2 = 25;
+    let sqrt2;
+
+    function square_root(n) {
+        let i;
+
+        for (i = 0; i * i <= n; i++) {
+            // document.write("<br> i = " + i);
+        }
+
+        // document.write("<br> out of the loop i = " + i);
+        return i - 1;
+    }
+
+    sqrt1 = square_root(num1);
+    sqrt2 = square_root(num2);
+
+    let sqrt3 = square_root(28);
+
+    document.write("<br> square root of num = " + num1 + " is " + sqrt1);
+    document.write("<br> square root of num = " + num2 + " is " + sqrt2);
+    document.write("<br> square root of num = " + 28 + " is " + sqrt3);
+    document.write("<br> square root of num = " + 19 + " is " + square_root(19));
+</script>
+
+<script>
+    // Write a function to find square_root of numbers from 0 to 100. The result should be greatest integer of square root.
+
+    function square_root(n) {
+        let i;
+
+        for (i = 0; i * i <= n; i++) {
+            // document.write("<br> i = " + i);
+        }
+
+        // document.write("<br> out of the loop i = " + i);
+        return i - 1;
+    }
+
+    for (let k = 0; k <= 100; k++) {
+        let sqrtk = square_root(k);
+
+        document.write("<br> square root of num = " + k + " is " + sqrtk);
+    }
+</script>

@@ -1,0 +1,83 @@
+Function is a block of instructions which can be run whenever required by calling the same.
+
+// This is a block.
+{
+    // ....
+}
+
+To identify a function, the name of function is important. 
+
+Syntax:
+
+function <function_name>(<parameters_comma_separated>)
+{
+    // Write statements to solve a particular problem.
+    // return some value if required
+}
+
+
+// Write a function to find square_root of a number. The result should be greatest integer of square root.
+
+<script>
+    let num1 = 16;
+    let sqrt1;
+
+
+    let num2 = 25;
+    let sqrt2;
+
+    {
+        let n = num1;
+        let i;
+
+        for(i = 0; i*i <= n; i++)
+        {
+        }
+
+        sqrt1 = i - 1;
+    }
+
+    {
+        let n = num2;
+        let i;
+
+        for(i = 0; i*i <= n; i++)
+        {
+        }
+
+        sqrt2 = i - 1;
+    }
+
+    document.write("<br> square root of num = " + num1 + " is " + sqrt1);
+    document.write("<br> square root of num = " + num2 + " is " + sqrt2);
+</script>
+
+
+// Same question as above, using function.
+<script>
+    let num1 = 16;
+    let sqrt1;
+
+    let num2 = 25;
+    let sqrt2;
+
+    function square_root(n)
+    {
+        let i;
+
+        for(i = 0; i*i <= n; i++)
+        {
+            document.write("<br> i = " + i);
+        }
+
+        document.write("<br> out of the loop i = " + i);
+        
+        return i - 1;
+    }
+
+    sqrt1 = square_root(num1);
+    sqrt2 = square_root(num2);
+
+    document.write("<br> square root of num = " + num1 + " is " + sqrt1);
+    document.write("<br> square root of num = " + num2 + " is " + sqrt2);
+</script>
