@@ -1,0 +1,41 @@
+<script>
+
+    function GreatestInteger(n)
+    {
+        let fraction = n % 1;
+        let integerValue = n - fraction;
+
+        return integerValue;
+    }
+
+    document.write("<br> greatest integer of " + 5.5 + " is " + GreatestInteger(5.5));
+    
+    document.write("<br> greatest integer of " + 5.1 + " is " + GreatestInteger(5.1));
+    
+    document.write("<br> greatest integer of " + 5.9999 + " is " + GreatestInteger(5.9999));
+</script>
+
+<script>
+
+    function GreatestInteger(n)
+    {
+        let fraction = n % 1;
+        let integerValue = n - fraction;
+
+        return integerValue;
+    }
+
+    // Reverse a number.
+    let num = 5432;
+
+    let rev = 0;
+
+    for(let n = num; n > 0; n = GreatestInteger(n/10))
+    {
+        let rem = n % 10;
+        rev = rev * 10 + rem;
+    }
+
+    document.write("<br> reverse of number " + num + " is " + rev);
+
+</script>
