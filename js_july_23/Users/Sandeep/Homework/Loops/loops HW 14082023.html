@@ -68,22 +68,25 @@
 
     <script>
 
-        // 3. Print all the digits of a number in reverse order.
+        // Q3. Print all the digits of a number in reverse order.
         //     E.g., for number 4356
         //     Print: 6, 5, 3, 4
+        var number = 4356;
+        var tempQuo;
+        var tempRem;
 
-        const number = 4356;  // The number
+        document.write("Print Reverse number of givrn number = ");
 
-        const numberStr = number.toString(); // Convert the number to a string
-        const length = numberStr.length;     // Get the length of the string
+        for (tempQuo = number; tempQuo > 0;) {
+            tempRem = tempQuo % 10;
+            tempQuo = tempQuo / 10;
 
-        document.write("Digits in reverse order:<br>");
+            tempQuo = tempQuo - (tempQuo % 1) // to remove the fraction from number
+            document.write(tempRem);
 
-        for (let i = length - 1; i >= 0; i--) {
-            const digit = parseInt(numberStr[i]); // Convert the character back to an integer
-            document.write(digit + ", " + "<br>");
         }
 
+        document.write("<br>");
     </script>
 
 
@@ -107,13 +110,19 @@
         }
 
     </script>
-    
+
     <script>
-
         const number1 = 16;
-        const sqrt1 = Math.sqrt(number1);
+        let isPerfectSquare1 = false;
 
-        if ((sqrt1 | 0) * (sqrt1 | 0) === number1) {
+        for (let guess = 1; guess <= number1; guess++) {
+            if (guess * guess === number1) {
+                isPerfectSquare1 = true;
+                break;
+            }
+        }
+
+        if (isPerfectSquare1) {
             document.write(number1 + " is a perfect square.");
         } else {
             document.write(number1 + " is not a perfect square.");
@@ -121,9 +130,16 @@
         document.write("<br>");
 
         const number2 = 12;
-        const sqrt2 = Math.sqrt(number2);
+        let isPerfectSquare2 = false;
 
-        if ((sqrt2 | 0) * (sqrt2 | 0) === number2) {
+        for (let guess = 1; guess <= number2; guess++) {
+            if (guess * guess === number2) {
+                isPerfectSquare2 = true;
+                break;
+            }
+        }
+
+        if (isPerfectSquare2) {
             document.write(number2 + " is a perfect square.");
         } else {
             document.write(number2 + " is not a perfect square.");
