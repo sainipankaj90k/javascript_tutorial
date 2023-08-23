@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // 1. Print numbers in Arithmetic progression (AP). 
+        //     AP requires 3 values: initial value (a), common-difference (d), and number of values (n).
+        //     First value a_0 = a
+        //     Second value a_1 = a + d
+        //     Third value a_2 = a + 2*d
+
+        //     nth value a_n-1 = a + (n-1)*d
+
+        //     E.g.,
+        //     for initial value 3, common difference 5, number of values as 4, 
+        //     Print: 3, 8, 13, 18
+
+        const a = 3;
+        // Initialization of Value
+        const d = 5;
+        // Common difference
+        const n = 4;
+        // Number of values
+
+        document.write("Arithmetic Progression (AP):<br>");
+
+        for (let i = 0; i < n; i++) {
+            let currentTerm = a + i * d;
+            document.write(currentTerm + ", " + "<br>");
+        }
+
+    </script>
+
+
+    <script>
+        //     2. Print numbers in Geometric progress (GP)
+        // initial value (a), common-ratio (r), and number of values (n)
+
+        // nth value a_n-1 = a * (r raised to the power (n-1)) = a * (r * r * .. n-1 times)
+
+        // E.g., initial value = 3, common ratio = 2, number of values = 4
+        // Print: 3, 6, 12, 24
+
+
+        const a1 = 3;
+        // Initialization of value
+        const r = 2;
+        // Common ratio
+        const n1 = 4;
+        // Number of values
+
+        document.write("Geometric Progression (GP):<br>");
+
+        let currentTerm = a;
+        for (let i = 0; i < n1; i++) {
+            document.write(currentTerm + ", " + "<br>");
+            currentTerm *= r;
+        }
+
+    </script>
+
+    <script>
+
+        // Q3. Print all the digits of a number in reverse order.
+        //     E.g., for number 4356
+        //     Print: 6, 5, 3, 4
+        var number = 4356;
+        var tempQuo;
+        var tempRem;
+
+        document.write("Print Reverse number of givrn number = ");
+
+        for (tempQuo = number; tempQuo > 0;) {
+            tempRem = tempQuo % 10;
+            tempQuo = tempQuo / 10;
+
+            tempQuo = tempQuo - (tempQuo % 1) // to remove the fraction from number
+            document.write(tempRem);
+
+        }
+
+        document.write("<br>");
+    </script>
+
+
+    <script>
+        // 4. From years 1 to 2024, print if the year is leap year or not.
+        //     E.g., 
+        //     1 is not a leap year
+        //     2 is not a leap year
+        //     3 is not a leap year
+        //     4 is a leap year
+        //     5 is not a leap year
+        //     ....
+        //     2024 is a leap year
+
+        for (let year = 1; year <= 2024; year++) {
+            if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+                document.write(year + " is a leap year<br>");
+            } else {
+                document.write(year + " is not a leap year<br>");
+            }
+        }
+
+    </script>
+
+    <script>
+        const number1 = 16;
+        let isPerfectSquare1 = false;
+
+        for (let guess = 1; guess <= number1; guess++) {
+            if (guess * guess === number1) {
+                isPerfectSquare1 = true;
+                break;
+            }
+        }
+
+        if (isPerfectSquare1) {
+            document.write(number1 + " is a perfect square.");
+        } else {
+            document.write(number1 + " is not a perfect square.");
+        }
+        document.write("<br>");
+
+        const number2 = 12;
+        let isPerfectSquare2 = false;
+
+        for (let guess = 1; guess <= number2; guess++) {
+            if (guess * guess === number2) {
+                isPerfectSquare2 = true;
+                break;
+            }
+        }
+
+        if (isPerfectSquare2) {
+            document.write(number2 + " is a perfect square.");
+        } else {
+            document.write(number2 + " is not a perfect square.");
+        }
+
+    </script>
+</body>
+
+</html>
