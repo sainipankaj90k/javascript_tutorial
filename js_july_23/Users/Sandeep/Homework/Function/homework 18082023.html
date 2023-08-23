@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // Write a function which returns cube-root of number provided in paramter.
+
+        function cubeRoot(n) {
+            let value = n * n * n;
+            return value;
+        }
+
+        let n = 5;
+        document.write("<br> cubeRoot of " + n + " is " + cubeRoot(n) + "<br>");
+        document.write(cubeRoot(4) + "<br>");
+
+    </script>
+
+    <script>
+        // Write a function which returns a power b (3 power 4 => 3 * 3 * 3 * 3), where first parameter is 'a' and second paramter is 'b'. 
+        // E.g., power(a, b) => this returns a * a * a ... b times.
+        function power(a, b) {
+            let result = 1;
+            for (let i = 0; i < b; i++) {
+                result = result * a;
+            }
+            return result;
+        }
+        document.write(power(10, 3) + "<br>");
+    </script>
+
+    <script>
+        // Write a function which calculates and returns value of below equation. 
+        // 3*x + cubeRootOf(y) + (2 power z)
+        // where x, y and z are parameters to the function.
+        // equation(x,y,z) => 3*x + y^(1/3) + 2^(z)
+
+        function equation(x, y, z) {
+            let result = 3 * x + cubeRoot(y) + power(2, z);
+            return result;
+        }
+
+        let result1 = equation(0, 0, 0); // 0 + 0 + 1 => 1
+        let result2 = equation(1, 1, 1); // 3 + 1 + 2 => 6
+        let result3 = equation(2, 1, 3); // 6 + 1 + 8 => 15
+
+        document.write("Result 1: " + result1 + "<br>");
+        document.write("Result 2: " + result2 + "<br>");
+        document.write("Result 3: " + result3 + "<br>");
+
+    </script>
+</body>
+
+</html>
