@@ -47,7 +47,7 @@ document.write("<br>");
   for (i = 1; i<=10; i++)
   {
     document.write(Geometric_Progress + "<br>");
-    Geometric_Progress = Geometric_Progress * common_ratio
+    Geometric_Progress = Geometric_Progress * common_ratio;
   }
   document.write("<br>");
 
@@ -68,7 +68,7 @@ for (tempQuo = number ; tempQuo>0;)
     tempRem = tempQuo % 10;
     tempQuo = tempQuo / 10;
      
-    tempQuo = tempQuo - (tempQuo%1) // to remove the fraction from number
+    tempQuo = tempQuo - (tempQuo%1); // to remove the fraction from number
     document.write(tempRem);
     
 }
