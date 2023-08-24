@@ -2,17 +2,18 @@
 //Q1. Write a function which returns reverse of a number provided in parameter.
 function reverse_number (n)
 {
-var number;
 var tempQuo;
 var tempRem;
 
-    for (tempQuo = number ; tempQuo>0;)
+    for (tempQuo = n ; tempQuo>0; tempRem = tempRem + 10)
         {
             tempRem = tempQuo % 10;
             tempQuo = tempQuo / 10;
             tempQuo = tempQuo - (tempQuo%1) // to remove the fraction from number
-            return tempRem;
+            //return tempRem;
         }
+        return tempRem;
+       
 }
 
     var value = 5267;
