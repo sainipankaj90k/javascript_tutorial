@@ -1,0 +1,37 @@
+What is Array in JavaScript?
+Array is a collection of values. i.e., array can contain more than one values. 
+
+
+let arr = ["abc", "def"]
+
+let arr = []
+arr[0] = "abc";
+arr[1] = "def";
+
+let arr = new Array()["abc", "def"]
+
+// arr[2] = "xyz";
+
+arr.push("xyz");
+
+arr[9] = "xyz";
+
+How to get value at any index?
+var a1 = arr[0]; // a1 = "abc"
+var a2 = arr[2]; // a2 = "xyz"
+
+#### Traversing an array using loop. 
+let length = 3;
+let arr = ["abc", "def", "xyz"]
+
+for(let i = 0; i < length; i++)
+{
+    document.write("<br> value at index " + i + " = " + arr[i]);
+}
+
+#### Inbuild functions and properties for array.
+## push(<element>) // adds an element to the end of the array.
+
+## pop() // Pops out the last element and returns it from this function. 
+
+## length // gives the length of the array at the moment.

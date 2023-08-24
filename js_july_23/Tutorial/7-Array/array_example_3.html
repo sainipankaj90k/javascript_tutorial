@@ -1,0 +1,39 @@
+<script>
+    // Print frequency of each alpha-numberic (lower case alphabets only) character in a string.
+    // "hello, how are you?"
+    // a = 1, b = 0, e = 2, h = 2, l = 2, o = 3, r = 1, u = 1, w = 1, y = 1.
+
+    let str = "have any string here.";
+    // let a = 0, b = 0, c = 0, d = 0, e = 0; // This will require at least 26 variables, to concise it, array is a good choice.
+    let arr = []
+
+    for(let i = 0; i < str.length; i++)
+    {
+        // Get ascii code.
+        let asciiCode = str.charCodeAt(i);
+
+        // document.write("<br> asciiCode  = " + asciiCode);
+
+        if(arr[asciiCode] == undefined)
+        {
+            // document.write("<br> if undefined asciiCode  = " + arr[asciiCode]);
+            arr[asciiCode] = 1;
+        }
+        else
+        {
+            // document.write("<br> else undefined asciiCode  = " + asciiCode);
+            arr[asciiCode] = arr[asciiCode] + 1;
+        }
+    }
+
+    for(let j = 97; j <= 122; j++)
+    {
+        if(arr[j] != undefined)
+        {
+            // document.write("<br> ascii code = " + j + " value of ascii code = " + String.fromCharCode(j) + " frequency number = " + arr[j]);
+            
+            document.write("<br> " + String.fromCharCode(j) + " = " + arr[j]);
+        }
+    }
+
+</script>

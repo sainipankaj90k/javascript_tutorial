@@ -1,0 +1,14 @@
+String is a collection of characters.
+Syntax: write character in double qoutes.
+
+let a = "my name is System"; // Here, 'a' is a variable contains a string. 
+let b = "numerical"; // here, 'b' is a variable contains 'numerical'.
+
+
+Each alphabet has an ASCII code:
+Numbers: 48 [10 numbers] => 57 // '0' = 48, '1' = 49, '9' = 57
+Upper case alphabet: 65 [26 characters] => 90 // 'A' = 65, 'B' = 66, 'Z' = 90
+Lower case alphabet: 97 [26 characters] => 122 // 'a' = 97, 'b' = 98, 'z' = 122
+
+How to find ASCII code of a character in a string.
+stringVar.charCodeAt(<indexOfStringElement>)
