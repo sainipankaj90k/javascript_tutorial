@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Q1. Calculate the frequency of alpha-numeric characters in a string.
+        // Alpha numeric is 0-9, A-Z, a-z
+        // E.g., "Hi! Welcome to my world Number 1545."
+        // Output: 
+        // 1 = 1
+        // 4 = 1
+        // 5 = 2
+        // H = 1
+        // N = 1
+        // W = 1
+        // e = 3
+        //...
+        // w = 1
+        // y = 1
+        let str = "Hi! Welcome to my world Number 1545.";
+        let arr = [];
+
+        for (let i = 0; i < str.length; i++) {
+            let asciiCode = str.charCodeAt(i);
+
+            if ((asciiCode >= 48 && asciiCode <= 57) ||  // Numeric characters 0-9
+                (asciiCode >= 65 && asciiCode <= 90) ||  // Uppercase alphabets A-Z
+                (asciiCode >= 97 && asciiCode <= 122)) { // Lowercase alphabets a-z
+
+                if (arr[asciiCode] === undefined) {
+                    arr[asciiCode] = 1;
+                } else {
+                    arr[asciiCode] += 1; 
+                    // Fix: Increment the count correctly
+                }
+            }
+        }
+
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] !== undefined) {
+                let character = String.fromCharCode(i);
+                document.write(character + " = " + arr[i] + "<br>");
+            }
+        }
+        // let str = "Hi! Welcome to my world Number 1545.";
+        // let arrAlphanumeric = [];
+        // let arrAlpha = [];
+
+        // for (let i = 0; i < str.length; i++) {
+        //     let char = str.charAt(i);
+        //     let asciiCode = char.charCodeAt(0);
+
+        //     if ((asciiCode >= 48 && asciiCode <= 57) ||  // Numeric characters 0-9
+        //         (asciiCode >= 65 && asciiCode <= 90) ||  // Uppercase alphabets A-Z
+        //         (asciiCode >= 97 && asciiCode <= 122)) { // Lowercase alphabets a-z
+
+        //         if (arrAlphanumeric[asciiCode] === undefined) {
+        //             arrAlphanumeric[asciiCode] = 1;
+        //         } else {
+        //             arrAlphanumeric[asciiCode]++;
+        //         }
+
+        //         if ((asciiCode >= 65 && asciiCode <= 90) ||  // Uppercase alphabets A-Z
+        //             (asciiCode >= 97 && asciiCode <= 122)) { // Lowercase alphabets a-z
+        //             if (arrAlpha[asciiCode] === undefined) {
+        //                 arrAlpha[asciiCode] = 1;
+        //             } else {
+        //                 arrAlpha[asciiCode]++;
+        //             }
+        //         }
+        //     }
+        // }
+
+        // for (let i = 0; i < arrAlphanumeric.length; i++) {
+        //     if (arrAlphanumeric[i] !== undefined) {
+        //         let character = String.fromCharCode(i);
+        //         document.write(character + " = " + arrAlphanumeric[i] + "<br>");
+        //     }
+        // }
+
+        // document.write("<br>");
+
+        // for (let i = 0; i < arrAlpha.length; i++) {
+        //     if (arrAlpha[i] !== undefined) {
+        //         let character = String.fromCharCode(i);
+        //         document.write(character + " = " + arrAlpha[i] + "<br>");
+        //     }
+        // }
+    </script>
+
+    <script>
+        // 2. Calculate the frequency of alpha - numeric characters in a string, consider lower case and upper case as same. (In output, only show upper case values.)
+        // Alpha numeric is 0-9, A-Z, a-z
+        // E.g., "Hi! Welcome to my world Number 1545."
+        // Output: 
+        // 1 = 0
+        // 4 = 1
+        // 5 = 2
+        // E = 3
+        // H = 1
+        // W = 2
+        // Y = 1
+
+        
+        document.write("<br>this is my second question<br>");
+        let str2 = "Hi! Welcome to my world Number 1545.";
+
+        let arr2 = [];
+
+        for (let i = 0; i < str2.length; i++) {
+            let char = str2.charAt(i);
+            let asciiCode = char.charCodeAt(0);
+
+            if ((asciiCode >= 48 && asciiCode <= 57) ||  // Numeric characters 0-9
+                (asciiCode >= 65 && asciiCode <= 90) ||  // Uppercase alphabets A-Z
+                (asciiCode >= 97 && asciiCode <= 122)) { // Lowercase alphabets a-z
+
+                // Convert lowercase to uppercase
+                if (asciiCode >= 97 && asciiCode <= 122) {
+                    asciiCode -= 32; // Convert lowercase to uppercase
+                }
+
+                if (arr2[asciiCode] === undefined) {
+                    arr2[asciiCode] = 1;
+                } else {
+                    arr2[asciiCode]++;
+                }
+            }
+        }
+
+        for (let i = 48; i <= 57; i++) { // Loop for numeric characters 0-9 in ASCII range
+            if (arr2[i] !== undefined) {
+                let character = String.fromCharCode(i);
+                document.write(character + " = " + arr2[i] + "<br>");
+            }
+        }
+
+        for (let i = 65; i <= 90; i++) { // Loop for uppercase A-Z in ASCII range
+            if (arr2[i] !== undefined) {
+                let character = String.fromCharCode(i);
+                document.write(character + " = " + arr2[i] + "<br>");
+            }
+        }
+    
+    </script>
+
+    <script>
+        //         3. Calculate number of lower case characters and upper case characters in provided string.
+        // // E.g., "Hi! Welcome to my world Number 1545."
+        // // Output: 
+        // // lower case characters = 21
+        // // upper case characters = 3
+
+        document.write("<br>question3rd <br>")
+
+        let str3 = "Hi! Welcome to my world Number 1545.";
+
+        // Calculate number of lowercase and uppercase characters
+        let lowerCaseCount = 0;
+        let upperCaseCount = 0;
+
+        for (let i = 0; i < str3.length; i++) {
+            let char = str3.charAt(i);
+            let charCode = char.charCodeAt(0);
+
+            if (charCode >= 97 && charCode <= 122) { // ASCII range for lowercase letters
+                lowerCaseCount++;
+            } else if (charCode >= 65 && charCode <= 90) { // ASCII range for uppercase letters
+                upperCaseCount++;
+            }
+        }
+
+        document.write("lower case characters = " + lowerCaseCount + "<br>");
+        document.write("upper case characters = " + upperCaseCount + "<br>");
+    </script>
+
+    
+    <script>
+         // 4. Calculate number of vowels and number of consonants in provided string.
+        // // E.g., "Hi! Welcome to my world Number 1545."
+        // // Output: 
+        // // vowels = 8
+        // // consonants = 16
+        document.write("<br>quetion no.4 <br>")
+      
+        let str4 = "Hi! Welcome to my world Number 1545.";
+
+        // Calculate number of vowels and consonants
+        let vowels = 0;
+        let consonants = 0;
+        let vowelChars = "aeiouAEIOU";
+
+        for (let i = 0; i < str.length; i++) {
+            let char = str.charAt(i);
+            let charCode = char.charCodeAt(0);
+
+            if (vowelChars.indexOf(char) !== -1) { // Check if char is a vowel
+                vowels++;
+            } else if ((charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122)) { // Check if char is a letter
+                consonants++;
+            }
+        }
+
+        document.write("vowels = " + vowels + "<br>");
+        document.write("consonants = " + consonants + "<br>");
+    </script>
+   
+
+
+</body>
+
+</html>
