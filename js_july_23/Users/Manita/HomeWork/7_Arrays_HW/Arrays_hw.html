@@ -1,0 +1,229 @@
+<script>
+    // Q1. Calculate the frequency of alpha-numeric characters in a string.
+    // Alpha numeric is 0-9, A-Z, a-z
+    // E.g., "Hi! Welcome to my world Number 1545."
+    // Output: 
+    // 1 = 1
+    // 4 = 1
+    // 5 = 2
+    // H = 1
+    // N = 1
+    // W = 1
+    // e = 3
+    //...
+    // w = 1
+    // y = 1
+    let str = "Hi! Welcome to my world Number 1545.";
+    // let a = 0, b = 0, c = 0, d = 0, e = 0; // This will require at least 26 variables, to concise it, array is a good choice.
+    let arr = []
+
+    for (let i = 0; i < str.length; i++) {
+        // Get ascii code.
+        let asciiCode = str.charCodeAt(i);
+
+        // document.write("<br> asciiCode  = " + asciiCode);
+
+        if (arr[asciiCode] == undefined) {
+            // document.write("<br> if undefined asciiCode  = " + arr[asciiCode]);
+            arr[asciiCode] = 1;
+        }
+        else {
+            // document.write("<br> else undefined asciiCode  = " + asciiCode);
+            arr[asciiCode] = arr[asciiCode] + 1;
+        }
+    }
+
+    for (let j = 0; j <= 122; j++) {
+        if (arr[j] != undefined) {
+            // document.write("<br> ascii code = " + j + " value of ascii code = " + String.fromCharCode(j) + " frequency number = " + arr[j]);
+
+            document.write("<br> " + String.fromCharCode(j) + " = " + arr[j]);
+        }
+    }
+    document.write("<br>");
+</script>
+
+<script>
+
+    // Q2. Calculate the frequency of alpha-numeric characters in a string, consider lower case and upper case as same. (In output, only show upper case values.)
+    // Alpha numeric is 0-9, A-Z, a-z
+    // E.g., "Hi! Welcome to my world Number 1545."
+    // Output: 
+    // 1 = 0
+    // 4 = 1
+    // 5 = 2
+    // E = 3
+    // H = 1
+    // W = 2
+    // Y = 1
+
+    // Example: Aaa
+    let str1 = "Hi! Welcome to my world Number 1545.";
+    // let a = 0, b = 0, c = 0, d = 0, e = 0; // This will require at least 26 variables, to concise it, array is a good choice.
+    let arr1 = []
+
+    for (let i = 0; i < str1.length; i++) {
+        // Get ascii code.
+        let asciiCode = str1.charCodeAt(i);
+
+        // document.write("<br> asciiCode  = " + asciiCode);
+
+        if (arr1[asciiCode] == undefined) {
+            // document.write("<br> if undefined asciiCode  = " + arr[asciiCode]);
+            arr1[asciiCode] = 1;
+        }
+        else {
+            // document.write("<br> else undefined asciiCode  = " + asciiCode);
+            arr1[asciiCode] = arr1[asciiCode] + 1;
+        }
+    }
+
+    for (let k = 48; k <= 57; k++) {
+        if (arr1[k] != undefined) {
+            document.write("<br> " + String.fromCharCode(k) + " = " + arr1[k]);
+        }
+    }
+    for (let j = 65; j <= 90; j++) {
+        if (arr1[j] != undefined || arr1[j + 32] != undefined) {
+            // document.write("<br> ascii code = " + j + " value of ascii code = " + String.fromCharCode(j) + " frequency number = " + arr[j]);
+            let TotalCharCount = 0;
+            if (arr1[j] != undefined) {
+                TotalCharCount = TotalCharCount + arr1[j];
+            }
+            if (arr1[j + 32] != undefined) {
+                TotalCharCount = TotalCharCount + arr1[j + 32];
+            }
+
+            document.write("<br> " + String.fromCharCode(j) + " = " + TotalCharCount);
+
+        }
+    }
+
+    document.write("<br>");
+
+</script>
+<script>
+    //  Q3. Calculate number of lower case characters and upper case characters in provided string.
+    // E.g., "Hi! Welcome to my world Number 1545."
+    // Output: 
+    // lower case characters = 21
+    // upper case characters = 3
+
+    let str2 = "Hi! Welcome to my world Number 1545.";
+    let arr2 = []
+
+    for (let i = 0; i < str2.length; i++) {
+        // Get ascii code.
+        let asciiCode = str2.charCodeAt(i);
+
+        // document.write("<br> asciiCode  = " + asciiCode);
+
+        if (arr2[asciiCode] == undefined) {
+            // document.write("<br> if undefined asciiCode  = " + arr[asciiCode]);
+            arr2[asciiCode] = 1;
+        }
+        else {
+            // document.write("<br> else undefined asciiCode  = " + asciiCode);
+            arr2[asciiCode] = arr2[asciiCode] + 1;
+        }
+    }
+    let LowerCaseCount = 0;
+
+    for (let j = 97; j <= 122; j++) 
+    {
+        if (arr2[j] != undefined) 
+        {
+            LowerCaseCount = LowerCaseCount + arr2[j];
+        }
+
+    }
+    document.write("<br> Lower case count = " + LowerCaseCount);
+    document.write("<br>");
+
+    let UpperCaseCount = 0;
+    
+    for (let k = 65; k <= 90; k++) 
+    {
+        if (arr2[k] != undefined) 
+        {
+            UpperCaseCount = UpperCaseCount + arr2[k];
+        }
+    }
+    document.write("<br> Upper Case Count =" + UpperCaseCount);
+    document.write("<br>");
+
+</script>
+
+<script>
+    //Q4. Calculate number of vowels and number of consonants in provided string.
+        // E.g., "Hi! Welcome to my world Number 1545."
+        // Output:
+        // vowels = 8
+        // consonants = 16
+        let str4 = "Hi! Welcome to my world Number 1545.";
+        let arr4 = []
+
+    for (let i = 0; i < str4.length; i++) {
+        // Get ascii code.
+        let asciiCode = str4.charCodeAt(i);
+
+        // document.write("<br> asciiCode  = " + asciiCode);
+
+        if (arr4[asciiCode] == undefined) {
+            // document.write("<br> if undefined asciiCode  = " + arr[asciiCode]);
+            arr4[asciiCode] = 1;
+        }
+        else {
+            // document.write("<br> else undefined asciiCode  = " + asciiCode);
+            arr4[asciiCode] = arr4[asciiCode] + 1;
+        }
+    }
+
+    
+    let vowels = 0;
+    let consonants = 0; 
+
+    for (let j = 65; j <= 90; j++)
+     {
+        if (arr4[j] != undefined || arr4[j + 32] != undefined) 
+        {
+            // document.write("<br> ascii code = " + j + " value of ascii code = " + String.fromCharCode(j) + " frequency number = " + arr[j]);
+            if (j == 65 || j==69 || j==73 || j== 79 || j==85)
+                {
+                    if (arr4[j] != undefined)
+                    {
+                    vowels = vowels + arr4[j];
+                    }
+
+                    if (arr4[j+32] != undefined)
+                    {
+                    vowels = vowels + arr4[j+32];
+                    }
+                }
+                else
+                {
+                    if (arr4[j] != undefined)
+                    {
+                        consonants = consonants + arr1[j];
+                    }
+
+                    if (arr4[j+32] != undefined)
+                    {
+                        consonants = consonants + arr4[j+32];
+                    }
+                }
+            }
+            
+        }
+    
+    document.write("<br> VowelsCount = " + vowels);
+    document.write("<br> ConsonantCount = " + consonants);
+
+    document.write("<br>");
+
+        
+</script>
+
+<script>
+// Q5. Redue Q2 the change is don't print the values rather update the arr1 itself?
+</script>
