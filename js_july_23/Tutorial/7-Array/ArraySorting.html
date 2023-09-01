@@ -1,0 +1,79 @@
+<script>
+    let a = 5, b = 7;
+
+    document.write("<br> a = " + a + ", b = " + b);
+
+    let x;
+    x = a;
+    a = b;
+    b = x;
+
+    document.write("<br> a = " + a + ", b = " + b);
+</script>
+<script>
+    // Find smallest number and index of smallest number in array.
+
+    let arr = [5, 4, 1, 7, 9, 6]
+
+    let len = arr.length;
+
+    let i = 0;
+    let smallestNumber = arr[i];
+    let smallestIndex = i;
+
+    for (; i < len; i++) {
+        if (smallestNumber > arr[i]) {
+            smallestNumber = arr[i];
+            smallestIndex = i;
+        }
+    }
+
+</script>
+
+<script>
+    function getSmallestNumberIndex(arr, startIndex) {
+        let len = arr.length;
+
+        let i = startIndex;
+        let smallestNumber = arr[i];
+        let smallestIndex = i;
+
+        for (; i < len; i++) {
+            if (smallestNumber > arr[i]) {
+                smallestNumber = arr[i];
+                smallestIndex = i;
+            }
+        }
+
+        return smallestIndex;
+    }
+
+    function printArray(arr) {
+        document.write("<br>");
+        for (let j = 0; j < arr.length; j++) {
+            document.write(arr[j] + ", ");
+        }
+    }
+
+    let arr1 = [5, 4, 1, 7, 9, 6];
+
+    printArray(arr1);
+
+    document.write("<br>");
+
+    for (let k = 0; k < arr1.length - 1; k++) {
+        let smallestNumberIndex = getSmallestNumberIndex(arr1, k);
+
+        // swap value at index k and smallestNumberIndex
+        let temp = arr1[k];
+        arr1[k] = arr1[smallestNumberIndex];
+        arr1[smallestNumberIndex] = temp;
+
+        
+        printArray(arr1);
+    }
+
+        document.write("<br>");
+    printArray(arr1);
+    
+</script>

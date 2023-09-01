@@ -1,0 +1,36 @@
+What is array sorting?
+
+Sorting is arranging elements of an array in certain order.
+E.g., 
+    Sorting in ascending order.
+    => Implies, next element is always greater than the current element.
+
+    Sorting in descending order.
+    => Implies, next element is always smaller than the current element. 
+
+arr: 4, 5, 3
+Sort this array in ascending order.
+
+arr: 3, 4, 5
+
+How?
+
+Algorithm: (Selection Sort)
+1. Find length of the array and assign it in variable 'len'.
+2. Iterate variable 'i' from 0 to len-1
+2.1. Find index of sortest element in subarray from index i to len-1, and save it in variable 'smallestIndex'.
+2.2. Swap values at index 'i' and index 'smallestIndex'. 
+
+
+Algorithm: to find smallest number from index 'x' to index 'y' in an array. (x < y)
+1. Assign value of array at index 'x' in variable 'smallestNumber'.
+2. Assign value of 'x' in variable 'smallestIndex'.
+3. Iterate variable 'k' from x + 1, to y. 
+3.1. if smallestNumber > arr[k], then assign value of arr[k] to smallestNumber and assign value of k in smallestIndex.
+4. return value of 'smallestIndex'
+
+Algorithm: swapping values of two variables 'm' and 'n'.
+1. Declare a variable named 'o'.
+2. o = n;
+3. n = m;
+4. m = o;
