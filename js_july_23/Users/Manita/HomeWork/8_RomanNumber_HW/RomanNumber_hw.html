@@ -1,0 +1,81 @@
+
+<script>
+	// Convert the Integer Number into the Roman Number?
+
+var Y = "";
+var X = 1993;
+var Z = X; 
+
+for (; X>0; )
+{
+if (X>=1000)
+{
+	Y = Y + "M";
+	X= X-1000;
+}
+else if (X>=900)
+{
+	Y = Y + "CM";
+	X= X-900;
+}
+else if (X>=500)
+{
+	Y = Y + "D";
+	X= X-500;
+}
+else if (X>=400)
+{
+	Y = Y + "CD";
+	X= X-400;
+}
+else if (X>=100)
+{
+	Y = Y + "C";
+	X= X-100;
+}
+else if (X>=90)
+{
+	Y = Y + "XC";
+	X= X-90;
+}
+else if (X>=50)
+{
+	Y = Y + "L";
+	X= X-50;
+}
+else if (X>=40)
+{
+	Y = Y + "XL";
+	X= X-40;
+}
+else if (X>=10)
+{
+	Y = Y + "X";
+	X= X-10;
+}
+else if (X>=9)
+{
+	Y = Y + "IX";
+	X= X-9;
+}
+else if (X>=5)
+{
+	Y = Y + "V";
+	X= X-5;
+}
+else if (X>=4)
+{
+	Y = Y + "IV";
+	X= X-4;
+}
+else if (X>=1)
+{
+	Y = Y + "I";
+	X= X-1;
+}
+
+}
+document.write( Z + " Integer Number is equal to = " + Y + " Roman Number" );
+
+
+</script>

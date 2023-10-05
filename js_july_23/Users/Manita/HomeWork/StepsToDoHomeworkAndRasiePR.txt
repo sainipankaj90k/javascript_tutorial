@@ -1,4 +1,4 @@
-// go to the repo folder.
+// go to the repo folder.(D:\js_july_23\javascript_tutorial>)
 
 git branch
 git checkout main
