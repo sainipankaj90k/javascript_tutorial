@@ -1,0 +1,83 @@
+<script>
+    //Q1. Write a function which returns reverse of a number provided in parameter.
+    function reverse_number (n)
+    {
+    var tempQuo;
+    var tempRem;
+    var temRev = 0;
+    
+        for (tempQuo = n ; tempQuo>0;)
+            {
+                tempRem = tempQuo % 10;
+                tempQuo = tempQuo / 10;
+                tempQuo = tempQuo - (tempQuo%1) // to remove the fraction from number
+                temRev = temRev*10 + tempRem;
+            }
+               
+            return temRev;
+    }
+    
+        var value = 5267;
+        document.write("<br> Print the Reverse of given number = " +  reverse_number(5267));
+    
+    
+    document.write("<br>");
+    
+    //Q2. Write a function which returns cube-root of number provided in paramter.
+    
+    function Cube_Root(n)
+    {
+        var number = n*n*n;
+        return number;
+    }
+     var num = 5;
+     document.write("<br> Cube root of number " + num + " is equal to = " + Cube_Root(5));
+     document.write("<br>");
+    
+    //Q3. Write a function which returns a power b (3 power 4 => 3 * 3 * 3 * 3), where first parameter is 'a' and second paramter is 'b'. 
+        // E.g., power(a, b) => this returns a * a * a ... b times.
+    
+        function Return_Power (Base_num,Power_num)
+        {
+            var Base_num;
+            var Power_num;
+            var result = 1;
+            for (var i = 0; i<Power_num; i++)
+            {
+                result = result * Base_num;
+                
+            }
+                return result;
+        }
+            var Base_value = 2;
+            var Power_value = 5;
+            document.write("<br> Return the power 5 of base number 3 = " + Return_Power (2,5));
+            document.write("<br>");
+    
+    //Q4. Write a function which calculates and returns value of below equation. 
+    // 3*x + cubeRootOf(y) + (2 power z)
+    // where x, y and z are parameters to the function.
+    // equation(x,y,z) => 3*x + y^(1/3) + 2^(z) 
+    // E.g., equation(0,0,0) => 0 + 0 + 1 => 1
+    // E.g., equation(1,1,1) => 3 + 1 + 2 => 6
+    // E.g., equation(2,1,3) => 6 + 1 + 8 => 15
+     
+    function Solve_Equation (a,b,c)
+    {
+        var Result_of_Equation;
+        Result_of_Equation = 3*a + Cube_Root (b) + Return_Power(2,c)
+        return Result_of_Equation;
+    }
+     var Result_of_Equation1 = Solve_Equation(0,0,0)
+    document.write("<br> Calculated equation result = " + Result_of_Equation1);
+    
+    var Result_of_Equation2 = Solve_Equation(1,1,1)
+    document.write("<br> Calculated equation result = " + Result_of_Equation2);
+    
+    var Result_of_Equation3 = Solve_Equation(2,1,3)
+    document.write("<br> Calculated equation result = " + Result_of_Equation3);
+    
+    document.write("<br> <br> End of the function homework");
+    </script>
+    
+    
